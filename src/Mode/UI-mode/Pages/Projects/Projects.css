@@ -1,0 +1,31 @@
+.wrapper {
+  border-top: 1px solid #3b3b3b;
+  border-bottom: 1px solid #3b3b3b;
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+.project-grid {
+  /* display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+  gap: 2rem;
+  /* margin-top: 2rem; */
+}
+.archive-title {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@media (min-width: 768px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .project-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
