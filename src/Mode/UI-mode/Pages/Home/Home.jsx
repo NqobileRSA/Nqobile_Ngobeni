@@ -1,13 +1,19 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "./Home.css";
-import { Left, ParallexBG, Right } from "../../components/components";
+import {
+  Left,
+  ParallexBG,
+  Right,
+  SkillSphere,
+} from "../../components/components";
 
 const Home = () => {
   return (
-    <section id="home " className="banner conatiner">
+    <section id="home " className="banner conatiner ">
       <Left />
       <Right />
+      <SkillSphere />
       <motion.h3
         initial={{ y: 10, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -28,10 +34,12 @@ const Home = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.8 }}
         className="paragraph">
-        I am a web developer with 4+ years of experience in React. I have a
-        strong foundation in front-end & back-end development and am skilled in
-        creating user-friendly and responsive web applications using React and
-        its ecosystem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, facere!
+        Excepturi ab aperiam sapiente libero quibusdam quod expedita voluptates.
+        Dolorem repellat corrupti tempore atque labore reprehenderit totam
+        doloremque ipsam rem veritatis est laudantium iste nemo perspiciatis
+        nobis praesentium eum sint ducimus, sunt, illum earum. Cumque, nostrum
+        aut. Eius, iure neque!
       </motion.p>
       <div className="actions">
         <a href="#projects">
@@ -53,7 +61,7 @@ const Home = () => {
           </motion.button>
         </a>
       </div>
-      <ParallexBG />
+      {/* <ParallexBG /> */}
     </section>
   );
 };

@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="app">
       <button onClick={toggleMode} className="mode-toggler">
-        {codeMode ? "UI-Mode" : "Source Code"}
+        {codeMode ? "UI" : "Source"}
       </button>
       {codeMode ? <SourceCodeMode /> : <UImode />}
     </div>

@@ -7,16 +7,17 @@ import weatherappImage from "../../assets/images/weather.png";
 const navlinks = [
   {
     label: "Home",
-    path: "#home",
+    path: "#",
   },
   {
     label: "About",
     path: "#about",
   },
   {
-    label: "Project",
-    path: "#project",
+    label: "Projects",
+    path: "#projects",
   },
+  { label: "Archives", path: "#archives" },
   {
     label: "Contact",
     path: "#contact",
@@ -39,13 +40,8 @@ const socials = [
     icon: "bi bi-whatsapp",
   },
   {
-    id: "Facebook",
-    link: "#",
-    icon: "bi bi-facebook",
-  },
-  {
     id: "Twitter",
-    link: "#",
+    link: "https://twitter.com/ngobeni_nqobile",
     icon: "bi bi-twitter-x",
   },
 ];

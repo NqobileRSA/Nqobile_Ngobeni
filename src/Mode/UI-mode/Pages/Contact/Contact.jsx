@@ -8,11 +8,7 @@ const Contact = () => {
     <div className="wrapper container" id="contact">
       <div className="contact-content">
         <h2 className="contact-header">Ready To Collaborate?</h2>
-        {/* <p className="text-lg tracking-wider font-medium text-center">
-          I'm always up for delving into your project, boosting your online
-          presence, or tackling website design and conversion challenges.
-        </p> */}
-        <a href="NqobileNgobeni72@gmail.com">
+        <a href="https://NqobileNgobeni72@gmail.com">
           <button className="contact-button duration-300">
             Let's Get Started.
           </button>

@@ -8,7 +8,7 @@
   justify-content: flex-end;
   gap: 1rem;
   color: #f2f2f2;
-  position: absolute;
+  position: fixed;
   left: 50px;
   bottom: 0;
 }
@@ -20,7 +20,7 @@
   justify-content: flex-end;
   gap: 1.5rem;
   color: #f2f2f2;
-  position: absolute;
+  position: fixed;
   right: 50px;
   bottom: 0;
 }
@@ -37,7 +37,7 @@
   justify-content: center;
   width: 2.5rem;
   height: 2.5rem;
-  background-color: #3b3b3b;
+  background-color: #2930416b;
   border-radius: 50%;
   font-size: 1.25rem;
   color: #f2f2f2;
@@ -53,7 +53,7 @@
 .separator {
   width: 2px;
   height: 10rem;
-  background-color: #333;
+  background-color: #2930416b;
 }
 
 /* Styles for RightSide component */

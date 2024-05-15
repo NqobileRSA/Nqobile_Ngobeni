@@ -1,15 +1,19 @@
 .wrapper {
-  border-top: 1px solid #3b3b3b;
-  border-bottom: 1px solid #3b3b3b;
+  border-top: 1px solid #2930416b;
+  border-bottom: 1px solid #2930416b;
   padding-top: 75px;
   padding-bottom: 75px;
 }
+.mantine-Paper-root,
+.mantine-Modal-header {
+  background: #151a2836 !important;
+  color: rgba(255, 255, 255, 0.92);
+}
 
 .project-grid {
-  /* display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
-  gap: 2rem;
-  /* margin-top: 2rem; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .archive-title {
   font-family: "Roboto Mono", monospace;

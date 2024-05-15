@@ -1,0 +1,10 @@
+@media screen and (min-width: 1200px) {
+  #section-skills {
+    position: absolute;
+    right: 10vw;
+    overflow: visible;
+  }
+  .skills-charts {
+    margin-right: 20%;
+  }
+}

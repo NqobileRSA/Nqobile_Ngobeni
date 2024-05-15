@@ -3,17 +3,11 @@ import "./Navbar.css";
 import { useDisclosure } from "@mantine/hooks";
 import { Drawer, Button } from "@mantine/core";
 import Modal from "react-bootstrap/Modal";
+import { navlinks } from "../../constants";
 
 const Navbar = () => {
   const [opened, { toggle }] = useDisclosure(false);
   const [activeTab, setActiveTab] = useState("#");
-
-  const navLinks = [
-    { path: "#", label: "Home" },
-    { path: "#projects", label: "Projects" },
-    { path: "#archives", label: "Archives" },
-    { path: "#contact", label: "Contact" },
-  ];
 
   const handleTabClick = (path) => {
     setActiveTab(path);
@@ -33,7 +27,7 @@ const Navbar = () => {
         </a>
         <nav id="navbar" className="navbar">
           <ul>
-            {navLinks.map((nav, index) => (
+            {navlinks.map((nav, index) => (
               <li key={index}>
                 <a
                   href={nav.path}
@@ -47,14 +41,14 @@ const Navbar = () => {
                 </a>
               </li>
             ))}
-            <li>
+            {/* <li>
               <Button
                 className="get-a-quote navbar-toggler"
                 variant="link"
                 onClick={handleShow}>
                 Resume
               </Button>
-            </li>
+            </li> */}
           </ul>
         </nav>
         <span className="navbar-toggler" onClick={toggle}>
@@ -68,7 +62,7 @@ const Navbar = () => {
           overlayProps={{ backgroundOpacity: 0.5, blur: 4 }}
           className="drawer">
           <ul>
-            {navLinks.map((item, index) => (
+            {navlinks.map((item, index) => (
               <li key={index} className="nav-item">
                 <a href={item.path} className="nav-link">
                   {item.label}

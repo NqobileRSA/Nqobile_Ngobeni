@@ -4,7 +4,7 @@ import "./ContactSides.css";
 const Right = () => {
   return (
     <div className="right-side">
-      <a href="#">
+      <a href="Nqobilengobeni.dev@gmail.com">
         <p className="email-link">Nqobilengobeni.dev@gmail.com</p>
       </a>
       <span className="separator"></span>

@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Projects.css";
-import { ProjectCard } from "../../components/components";
+import { ProjectCard, SectionTitle } from "../../components/components";
 import { motion } from "framer-motion";
+import { useDisclosure } from "@mantine/hooks";
+import { Modal } from "@mantine/core";
+
+const getRandomProject = (projects) => {
+  const randomIndex = Math.floor(Math.random() * projects.length);
+  return projects[randomIndex];
+};
 
 const Projects = () => {
+  const [opened, { open, close }] = useDisclosure(false);
   const dummyProjects = [
     {
       title: "Project 1",
@@ -15,33 +23,43 @@ const Projects = () => {
       liveUrl: "https://project1.example.com",
       videoUrl: "https://www.youtube.com/watch?v=abcdefghijk",
     },
+    {
+      title: "Project 2",
+      description: "This is the description for Project 2.",
+      technologies: ["React", "Node.js", "MongoDB"],
+      imgUrl:
+        "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg",
+      githubUrl: "https://github.com/example/project2",
+      liveUrl: "https://project2.example.com",
+      videoUrl: "https://www.youtube.com/watch?v=abcdefghijk",
+    },
+    {
+      title: "Project 3",
+      description: "This is the description for Project 3.",
+      technologies: ["React", "Node.js", "MongoDB"],
+      imgUrl:
+        "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg",
+      githubUrl: "https://github.com/example/project3",
+      liveUrl: "https://project3.example.com",
+      videoUrl: "https://www.youtube.com/watch?v=abcdefghijk",
+    },
   ];
+
+  const [randomProject, setRandomProject] = useState(
+    getRandomProject(dummyProjects)
+  );
 
   return (
     <section id="projects" className="wrapper container">
-      <div className="archive-header">
-        <motion.h1
-          initial={{ y: 10, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.7 }}
-          className="heading-1">
-          <span
-            className="subheading"
-            style={{
-              fontSize: "2rem",
-              color: "#d0d0d0",
-            }}>
-            Deployed Projects
-          </span>
-        </motion.h1>
-      </div>
-      <motion.div className="project-grid">
+      <SectionTitle title="Featured Projects" titleNo="__" />
+      <Modal opened={opened} onClose={close} size="auto" fullScreen>
         {dummyProjects.map((item, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay: index * 0.1 }}>
+            initial={{ y: 10, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+            whileInView={{ opacity: 1 }}>
             <ProjectCard
               title={item.title}
               description={item.description}
@@ -50,9 +68,28 @@ const Projects = () => {
               githubUrl={item.githubUrl}
               liveUrl={item.liveUrl}
               videoUrl={item.videoUrl}
+              open={open}
             />
           </motion.div>
         ))}
+      </Modal>
+      <motion.div className="project-grid container">
+        <motion.div
+          key={randomProject.title}
+          initial={{ y: 10, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.6 }}>
+          <ProjectCard
+            title={randomProject.title}
+            description={randomProject.description}
+            technologies={randomProject.technologies}
+            imgUrl={randomProject.imgUrl}
+            githubUrl={randomProject.githubUrl}
+            liveUrl={randomProject.liveUrl}
+            videoUrl={randomProject.videoUrl}
+            open={open}
+          />
+        </motion.div>
       </motion.div>
     </section>
   );

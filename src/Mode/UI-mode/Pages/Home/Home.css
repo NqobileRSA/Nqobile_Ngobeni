@@ -27,7 +27,7 @@
 
 .paragraph {
   font-size: 1rem;
-  color: #b6b6b6;
+  color: #d2d2d2;
   max-width: 650px;
 }
 
@@ -62,7 +62,7 @@
   height: 3.5rem;
   font-size: 1.2rem;
   font-weight: bold;
-  border: 1px solid #b6b6b6;
+  border: 0.5px solid #b6b6b634;
   border-radius: 0.25rem;
   color: #e8e8e8;
   background-color: transparent;
@@ -72,6 +72,10 @@
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-style: normal;
+  background: transparent;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.3px);
+  -webkit-backdrop-filter: blur(4.3px);
 }
 
 .button:hover {

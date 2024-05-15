@@ -1,6 +1,7 @@
 import { AiOutlineYoutube } from "react-icons/ai";
 import { TbBrandGithub } from "react-icons/tb";
 import { RxOpenInNewWindow } from "react-icons/rx";
+
 import "./ProjectCard.css";
 
 const ProjectCard = ({
@@ -11,11 +12,10 @@ const ProjectCard = ({
   githubUrl,
   liveUrl,
   videoUrl,
+  open,
 }) => {
   return (
     <section className="projects-section">
-      {/* <SectionTitle title="Some Things I have Built" titleNo="03" /> */}
-      {/* ============ project One Start here ================ */}
       <div className="projects-container">
         <div className="project-item">
           <a
@@ -30,7 +30,12 @@ const ProjectCard = ({
           </a>
           <div className="project-details">
             <div>
-              <p className="project-tag">Featured Project</p>
+              <p className="project-tag">
+                <span onClick={open} className="btn btn-outline-info">
+                  view all Project
+                </span>
+                | Featured
+              </p>
               <h3 className="project-title">{title}</h3>
             </div>
             <p className="project-description">{description}</p>

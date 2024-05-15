@@ -1,21 +1,13 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { ArchiveCard } from "../../components/components";
+import { ArchiveCard, SectionTitle } from "../../components/components";
 import { archiveData } from "../../constants";
 import "./Archives.css";
 const Archives = () => {
   const [showMore, setShowMore] = useState(false);
   return (
     <div className="archive-container" id="archives">
-      <div className="archive-header">
-        <h2
-          className="archive-title"
-          id="archive-h2"
-          style={{ color: "#d0d0d0" }}>
-          GitHub Archives
-        </h2>
-        {/* <p className="archive-subtitle">Browse The Archives</p> */}
-      </div>
+      <SectionTitle title="GitHub Archives" titleNo="__" />
       <div className="archive-list">
         {archiveData
           .slice(0, showMore ? archiveData.length : 3)

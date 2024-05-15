@@ -1,7 +1,14 @@
 import React from "react";
 import "./UImode.css";
 import { Navbar } from "./components/components";
-import { Archives, Contact, Home, Projects, Services } from "./Pages/Pages";
+import {
+  About,
+  Archives,
+  Contact,
+  Home,
+  Projects,
+  Services,
+} from "./Pages/Pages";
 
 const UImode = () => {
   return (
@@ -11,6 +18,7 @@ const UImode = () => {
       </header>
       <main>
         <Home />
+        <About />
         {/* <Services /> */}
         <Projects />
         <Archives />
