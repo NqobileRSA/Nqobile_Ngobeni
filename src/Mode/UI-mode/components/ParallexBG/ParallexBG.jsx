@@ -39,7 +39,7 @@ const ParallexBG = () => {
           autoPlay: true,
           background: {
             color: {
-              // value: "#0d47a1",
+              // "value": "#0d47a1"
             },
             image: "",
             position: "",
@@ -361,16 +361,22 @@ const ParallexBG = () => {
               },
             },
             shape: {
-              close: true,
-              fill: true,
-              options: {},
-              type: "circle",
+              type: "image",
+              options: {
+                image: [
+                  { src: js },
+                  { src: html },
+                  { src: node },
+                  { src: reactIcon },
+                  { src: css },
+                  { src: db },
+                  { src: android },
+                  { src: apple },
+                ],
+              },
             },
             size: {
-              value: {
-                min: 1,
-                max: 10,
-              },
+              value: { min: 10, max: 15 },
               animation: {
                 count: 0,
                 enable: true,
@@ -495,7 +501,7 @@ const ParallexBG = () => {
             links: {
               blink: false,
               color: {
-                value: "#3e3e3e35",
+                value: "#00000",
               },
               consent: false,
               distance: 150,

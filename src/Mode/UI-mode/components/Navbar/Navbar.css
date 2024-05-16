@@ -62,8 +62,9 @@ h1 {
   z-index: 99;
   background-color: transparent;
   border-bottom: 1px solid rgba(38, 38, 38, 0);
-  /* position: absolute; */
-  /* width: 100%; */
+  position: fixed;
+  width: 100%;
+  top: 0;
   padding-inline: 50px;
   gap: 10px;
 }

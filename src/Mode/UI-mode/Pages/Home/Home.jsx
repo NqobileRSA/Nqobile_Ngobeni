@@ -13,7 +13,7 @@ const Home = () => {
     <section id="home " className="banner conatiner ">
       <Left />
       <Right />
-      <SkillSphere />
+      {/* <SkillSphere /> */}
       <motion.h3
         initial={{ y: 10, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -37,9 +37,7 @@ const Home = () => {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, facere!
         Excepturi ab aperiam sapiente libero quibusdam quod expedita voluptates.
         Dolorem repellat corrupti tempore atque labore reprehenderit totam
-        doloremque ipsam rem veritatis est laudantium iste nemo perspiciatis
-        nobis praesentium eum sint ducimus, sunt, illum earum. Cumque, nostrum
-        aut. Eius, iure neque!
+        doloremque ipsam rem veritatis
       </motion.p>
       <div className="actions">
         <a href="#projects">
@@ -61,7 +59,7 @@ const Home = () => {
           </motion.button>
         </a>
       </div>
-      {/* <ParallexBG /> */}
+      <ParallexBG />
     </section>
   );
 };

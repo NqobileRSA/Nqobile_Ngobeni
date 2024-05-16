@@ -5,12 +5,16 @@ import image from "../../../../assets/images/ba6aecb9b6ee436ca3c676e0e3b57d2c.jp
 
 const About = () => {
   return (
-    <section className="about container" id="about">
+    <section className="about container wrapper" id="about">
       <SectionTitle title="About Me" titleNo="__" />
       <div className="about-me p-2">
         <div className="row">
           <div className="col-lg-4">
-            <img src={image} className="img-fluid" />
+            <img
+              src={image}
+              className="img-fluid"
+              style={{ opacity: "0.75" }}
+            />
           </div>
           <div className="col-lg-8 pt-4 pt-lg-0 content">
             <h3
